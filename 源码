@@ -1,0 +1,38 @@
+
+```javascript
+var OriginTitile = document.title, titleTime;
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                document.title = 'master你在哪> <';
+                clearTimeout(titleTime);
+            } else {
+                document.title = 'master你找到我啦qwq';
+                titleTime = setTimeout(function() {
+                    document.title = OriginTitile;
+                },2000);
+            }
+        });
+```
+用法
+```html
+<html>
+<body>
+<script type="text/javascript">
+var OriginTitile = document.title, titleTime;
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                document.title = 'master你在哪> <';
+                clearTimeout(titleTime);
+            } else {
+                document.title = 'master你找到我啦qwq';
+                titleTime = setTimeout(function() {
+                    document.title = OriginTitile;
+                },2000);
+            }
+        });
+</script>
+</body>
+</html>
+```
